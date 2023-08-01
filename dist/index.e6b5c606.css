@@ -1,0 +1,44 @@
+.header {
+  border: 2px solid #000;
+  margin: 1px;
+}
+
+.header ul {
+  justify-content: space-between;
+  padding: .5rem;
+  list-style-type: none;
+  display: flex;
+}
+
+.header ul div {
+  display: flex;
+}
+
+li {
+  padding: 0 .5rem;
+}
+
+.items {
+  display: flex;
+}
+
+img {
+  width: 200px;
+  height: 200px;
+}
+
+.card {
+  text-align: center;
+  border: 1px solid #000;
+  justify-content: center;
+  width: 15rem;
+  margin: .25rem;
+  padding: .5rem;
+}
+
+.restraunt {
+  flex-wrap: wrap;
+  display: flex;
+}
+
+/*# sourceMappingURL=index.e6b5c606.css.map */
