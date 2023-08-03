@@ -27409,6 +27409,10 @@ parcelHelpers.defineInteropFlag(exports);
 var _jsxDevRuntime = require("react/jsx-dev-runtime");
 var _constant = require("../constant");
 var _constantDefault = parcelHelpers.interopDefault(_constant);
+var _react = require("react");
+var _search = require("./search");
+var _searchDefault = parcelHelpers.interopDefault(_search);
+var _s = $RefreshSig$();
 const RestrauntCard = (restaurantCard)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
         className: "card",
         children: [
@@ -27416,7 +27420,7 @@ const RestrauntCard = (restaurantCard)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)
                 children: restaurantCard.name
             }, void 0, false, {
                 fileName: "src/components/Body.js",
-                lineNumber: 6,
+                lineNumber: 7,
                 columnNumber: 1
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
@@ -27424,42 +27428,58 @@ const RestrauntCard = (restaurantCard)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)
                 alt: "food"
             }, void 0, false, {
                 fileName: "src/components/Body.js",
-                lineNumber: 7,
+                lineNumber: 8,
                 columnNumber: 1
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h4", {
-                children: restaurantCard.itemName
+                children: restaurantCard.dsaditemName
             }, void 0, false, {
                 fileName: "src/components/Body.js",
-                lineNumber: 8,
+                lineNumber: 9,
                 columnNumber: 1
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h4", {
                 children: restaurantCard.location
             }, void 0, false, {
                 fileName: "src/components/Body.js",
-                lineNumber: 9,
+                lineNumber: 10,
                 columnNumber: 1
             }, undefined)
         ]
     }, void 0, true, {
         fileName: "src/components/Body.js",
-        lineNumber: 5,
+        lineNumber: 6,
         columnNumber: 5
     }, undefined);
 _c = RestrauntCard;
-const Body = ()=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _jsxDevRuntime.Fragment), {
-        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-            className: "restraunt",
-            children: (0, _constantDefault.default).map((card)=>{
-                return RestrauntCard(card);
-            })
-        }, void 0, false, {
-            fileName: "src/components/Body.js",
-            lineNumber: 15,
-            columnNumber: 5
-        }, undefined)
-    }, void 0, false);
+const Body = ()=>{
+    _s();
+    const [searchText, setSearchText] = (0, _react.useState)("");
+    const [restaurant, setRestraunt] = (0, _react.useState)((0, _constantDefault.default));
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _jsxDevRuntime.Fragment), {
+        children: [
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _searchDefault.default), {
+                text: searchText,
+                rest: restaurant
+            }, void 0, false, {
+                fileName: "src/components/Body.js",
+                lineNumber: 19,
+                columnNumber: 3
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                className: "restraunt",
+                children: restaurant.map((card)=>{
+                    return RestrauntCard(card);
+                })
+            }, void 0, false, {
+                fileName: "src/components/Body.js",
+                lineNumber: 20,
+                columnNumber: 5
+            }, undefined)
+        ]
+    }, void 0, true);
+};
+_s(Body, "hsmQSs6ncPZq5/bWSMOYnaIZ+YQ=");
 _c1 = Body;
 exports.default = Body;
 var _c, _c1;
@@ -27471,7 +27491,7 @@ $RefreshReg$(_c1, "Body");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","../constant":"jVIFP"}],"jVIFP":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","../constant":"jVIFP","react":"21dqq","./search":"7LAev","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"jVIFP":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 const restaurantData = [
@@ -27538,6 +27558,53 @@ const restaurantData = [
 ];
 exports.default = restaurantData;
 
-},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}]},["hcwwj","1xC6H","2kQhy"], "2kQhy", "parcelRequired103")
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"7LAev":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$da2d = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+$parcel$ReactRefreshHelpers$da2d.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _jsxDevRuntime = require("react/jsx-dev-runtime");
+var _react = require("react");
+const Search = (props)=>{
+    console.log("DFssdad");
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+        children: [
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("input", {
+                type: "text",
+                className: "search-input"
+            }, void 0, false, {
+                fileName: "src/components/search.js",
+                lineNumber: 6,
+                columnNumber: 5
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
+                children: "Search"
+            }, void 0, false, {
+                fileName: "src/components/search.js",
+                lineNumber: 9,
+                columnNumber: 5
+            }, undefined)
+        ]
+    }, void 0, true, {
+        fileName: "src/components/search.js",
+        lineNumber: 5,
+        columnNumber: 9
+    }, undefined);
+};
+_c = Search;
+exports.default = Search;
+var _c;
+$RefreshReg$(_c, "Search");
+
+  $parcel$ReactRefreshHelpers$da2d.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}]},["hcwwj","1xC6H","2kQhy"], "2kQhy", "parcelRequired103")
 
 //# sourceMappingURL=index.7271efb6.js.map
