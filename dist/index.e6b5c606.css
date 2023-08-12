@@ -41,4 +41,18 @@ img {
   display: flex;
 }
 
+.shimmer {
+  background-color: #989898;
+  min-width: 200px;
+  min-height: 200px;
+  margin: .5rem;
+  padding: .5rem;
+}
+
+.shimmer-div {
+  flex-wrap: wrap;
+  justify-content: space-between;
+  display: flex;
+}
+
 /*# sourceMappingURL=index.e6b5c606.css.map */
