@@ -1,19 +1,18 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
+import { Auth} from "../context/AuthContext";
 
 const Authorization = () => {
-  const [loggedIn, setLoggedIn] = useState(1);
-
+  const { authUser, setAuthUser, isLoggedIn, setIsLoggedIn, logIn, logOut} = Auth();
   return (
-    <>
-      <button
-        className="loggin-btn"
-        onClick={() => {
-          setLoggedIn(loggedIn ? 0 : 1);
-        }}
-      >
-        {loggedIn ? 'LogOut' : 'LogIn'}
-      </button>
-    </>
+    <div className="flex ">
+      {isLoggedIn ? (
+        <button onClick={logOut}>{"Log out"}</button>
+      ) : (
+        <button onClick={logIn}>
+          { "Log in" }  
+        </button>
+      )}
+    </div>
   );
 };
 export default Authorization;
