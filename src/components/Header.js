@@ -1,37 +1,37 @@
 import { Link } from "react-router-dom";
 import Authorization from "./Authorization";
 import logo from "../assest/img/epicEats.png";
+import shoppingCart from "../assest/img/shoppingCart.png";
 
 const Topic = () => {
   return (
     <>
-      <img className="m-1 ml-5 p-1 h-15 w-20" src={logo} alt="Epic Eats Logo" />
+      <img className="h-24 w-24 p-1" src={logo} alt="Epic Eats Logo" />
     </>
   );
 };
 
 const Header = () => {
   return (
-    <div className="bg-not-perfect-grey shadow-sm text-vibrant-red font-mono text-lg fixed top-0 left-0 right-0 z-50">
-      <div className="flex justify-between items-center px-3 py-2">
-        <Topic />
-        <ul className="flex space-x-4 font-bold">
-          <Link to="/home">
-            <li>Home</li>
-          </Link>
-          <Link to="/cart">
-            <li>Cart</li>
-          </Link>
-        </ul>
-        <div className="space-x-4">
-          <Authorization />
-        </div>
-      </div>
-      <div className="px-4">
-        {" "}
-        {/* Add padding to create spacing */}
-        <hr className="border-t-2 border-white" />{" "}
-        {/* White line after the navbar */}
+    <div className="bg-white flex justify-between items-center px-3 shadow-sm text-not-perfect-grey font-mono text-lg sticky top-0 left-0 right-0 z-10">
+      <Topic />
+      <ul className="flex space-x-4 ">
+        <Link to="/home">
+          <li className="text-gray-700 hover:text-vibrant-red focus:text-vibrant-red cursor-pointer transition-colors duration-300">
+            Home
+          </li>
+        </Link>
+      </ul>
+      <div className="flex mr-4">
+        <Link to="/cart">
+          <div className="flex ">
+            <img src={shoppingCart} className="h-8 w-8 p-1" />
+            <div className=" mr-4 text-gray-700 hover:text-vibrant-red focus:text-vibrant-red cursor-pointer transition-colors duration-300">
+            Cart
+            </div>
+          </div>
+        </Link>
+        <Authorization />
       </div>
     </div>
   );

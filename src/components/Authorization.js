@@ -4,13 +4,13 @@ import { Auth} from "../context/AuthContext";
 const Authorization = () => {
   const { authUser, setAuthUser, isLoggedIn, setIsLoggedIn, logIn, logOut} = Auth();
   return (
-    <div className="flex ">
+    <div className="text-gray-700 hover:text-vibrant-red focus:text-vibrant-red cursor-pointer transition-colors duration-300">
       {isLoggedIn ? (
-        <button onClick={logOut}>{"Log out"}</button>
+        <div onClick={logOut}>{"Log out"}</div>
       ) : (
-        <button onClick={logIn}>
+        <div onClick={logIn}>
           { "Log in" }  
-        </button>
+        </div>
       )}
     </div>
   );

@@ -3,10 +3,9 @@ import ReactDOM from "react-dom/client";
 import Header from "./components/Header";
 import Body from "./components/Body";
 import RestaurantMenu from "./components/RestaurantMenu";
-import Profile from "./components/Profile";
 import Shimmer from "./components/Shimmer";
+import Footer from "./components/Footer";
 import {
-  BrowserRouter,
   RouterProvider,
   createBrowserRouter,
   Outlet,
@@ -27,14 +26,15 @@ const Container = () => {
   }, []); //one time
 
   return (
-    <div className="bg-not-perfect-grey">
+    <>
       <Provider store={store}>
         <AuthProvider>
-          <Header />
+       
           <Outlet />
         </AuthProvider>
       </Provider>
-    </div>
+      <Footer/>
+    </>
   );
 };
 

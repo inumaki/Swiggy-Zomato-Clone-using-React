@@ -1,23 +1,29 @@
-import restaurantData from "../constant";
+import { restaurantData } from "../constant";
 import { useEffect, useState } from "react";
 import Shimmer from "./Shimmer";
 import imgSrc from "../assest/img/food.jpg";
 import { Link } from "react-router-dom";
 import checkOnline from "../utils/checkOnline";
 import Search from "./Search";
+import { Carousel } from "./Carousel";
 
 const RestaurantCard = (restaurantCard) => (
-  <div
-    key={restaurantCard.name}
-    className="flex justify-center m-3 p-2 w-56 shadow-lg bg-not-so-yellow text-fefe font-semibold flex-col text-center rounded-lg"
-  >
-    <img className="rounded-lg" src={imgSrc} alt="food" />
-    <h3 className="font-bold">{restaurantCard.name}</h3>
-    <Link to={"/restaurant/" + restaurantCard.name}>
-      <h4>{restaurantCard.dsaditemName}</h4>
-      <h4>{restaurantCard.location}</h4>
-    </Link>
+
+<div key = {restaurantCard.key} className="mx-auto my-1 w-64 p-2 bg-fefe rounded-lg hover:shadow-lg">
+  <Link to = {"/restaurant/"+ restaurantCard.name} >
+  <img src={imgSrc} alt="menu" className="rounded-lg w-full" />
+  <div className="grid gap-4">
+    <div className="p-4">
+      <h2 className="text-lg text-not-perfect-grey font-semibold mb-1">
+        {restaurantCard.name}
+      </h2>
+      <p className="text-gray-700 mb-2">{restaurantCard.description}</p>
+      <p className="text-green-600 font-semibold">{restaurantCard.price}</p>
+    </div>
   </div>
+  </Link>
+</div>
+
 );
 
 const Body = () => {
@@ -41,11 +47,14 @@ const Body = () => {
   return allRestaurant?.length === 0 ? (
     <Shimmer />
   ) : (
-    <div className="pt-28">
+    <div className="pt-2">
       <Search
         setFilteredRestaurant={setFilteredRestaurant}
         allRestaurant={allRestaurant}
       />
+      <div>
+        <Carousel />
+      </div>
       <div className="restaurant flex flex-wrap m-8">
         {filteredRestaurant.length === 0 ? (
           <h1>Not Found</h1>

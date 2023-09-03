@@ -1,15 +1,22 @@
-const restaurantData = [
+import banner1 from "./assest/img/banner2.jpg";
+import banner2 from "./assest/img/banner3.jpg";
+import banner3 from "./assest/img/banners.jpg";
+export const restaurantData = [
   {
     name: "Tropical Bliss Resort",
     location: "Exotic Beachfront",
+    price: "114.99",
+    description:
+      "A fresh and healthy breakfast with tropical fruits and yogurt.",
+
     image: "https://example.com/images/tropical_bliss.jpg",
     menu: [
       {
         itemName: "Beach Breeze Breakfast",
         price: "114.99",
-        image: "https://example.com/images/beach_breeze_breakfast.jpg",
         description:
           "A fresh and healthy breakfast with tropical fruits and yogurt.",
+        image: "https://example.com/images/beach_breeze_breakfast.jpg",
       },
       {
         itemName: "Coconut Shrimp Delight",
@@ -43,6 +50,8 @@ const restaurantData = [
   {
     name: "Alpine Retreat Lodge",
     location: "Snowy Mountains",
+    price: "114.99",
+    description: "A fresh and healthy breakfast with tropical fruits and yogurt.",
     image: "https://example.com/images/alpine_retreat.jpg",
     menu: [
       {
@@ -83,6 +92,9 @@ const restaurantData = [
   {
     name: "Urban Elegance Hotel",
     location: "City Center",
+    price: "114.99",
+    description:
+      "A fresh and healthy breakfast with tropical fruits and yogurt.",
     image: "https://example.com/images/urban_elegance.jpg",
     menu: [
       {
@@ -125,6 +137,8 @@ const restaurantData = [
   {
     name: "Rustic Riverside Lodge",
     location: "Scenic Riverbank",
+    price: "114.99",
+    description: "A fresh and healthy breakfast with tropical fruits and yogurt.",
     image: "https://example.com/images/rustic_lodge.jpg",
     menu: [
       {
@@ -165,6 +179,9 @@ const restaurantData = [
   {
     name: "Serene Mountain Lodge",
     location: "Majestic Peaks",
+    price: "114.99",
+    description:
+      "A fresh and healthy breakfast with tropical fruits and yogurt.",
     image: "https://example.com/images/serene_lodge.jpg",
     menu: [
       {
@@ -205,6 +222,9 @@ const restaurantData = [
   {
     name: "Historic Grand Hotel",
     location: "City Landmark",
+    price: "114.99",
+    description:
+      "A fresh and healthy breakfast with tropical fruits and yogurt.",
     image: "https://example.com/images/historic_grand_hotel.jpg",
     menu: [
       {
@@ -246,6 +266,9 @@ const restaurantData = [
   {
     name: "Seaside Sunset Inn",
     location: "Coastal Retreat",
+    price: "114.99",
+    description:
+      "A fresh and healthy breakfast with tropical fruits and yogurt.",
     image: "https://example.com/images/seaside_inn.jpg",
     menu: [
       {
@@ -284,6 +307,9 @@ const restaurantData = [
   {
     name: "Enchanted Forest Lodge",
     location: "Mystical Woods",
+    price: "114.99",
+    description:
+      "A fresh and healthy breakfast with tropical fruits and yogurt.",
     image: "https://example.com/images/enchanted_forest.jpg",
     menu: [
       {
@@ -326,6 +352,9 @@ const restaurantData = [
   {
     name: "Skyview Heights Hotel",
     location: "Panoramic Skyline",
+    price: "114.99",
+    description:
+      "A fresh and healthy breakfast with tropical fruits and yogurt.",
     image: "https://example.com/images/skyview_heights.jpg",
     menu: [
       {
@@ -365,6 +394,9 @@ const restaurantData = [
   {
     name: "Mystic Oasis Retreat",
     location: "Desert Sanctuary",
+    price: "114.99",
+    description:
+      "A fresh and healthy breakfast with tropical fruits and yogurt.",
     image: "https://example.com/images/mystic_oasis.jpg",
     menu: [
       {
@@ -405,4 +437,14 @@ const restaurantData = [
   },
 ];
 
-export default restaurantData;
+export const bannersData = [
+  {
+    src: banner1,
+  },
+  {
+    src: banner2,
+  },
+  {
+    src: banner3
+  }
+];
