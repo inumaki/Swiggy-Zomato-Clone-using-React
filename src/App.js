@@ -5,11 +5,7 @@ import Body from "./components/Body";
 import RestaurantMenu from "./components/RestaurantMenu";
 import Shimmer from "./components/Shimmer";
 import Footer from "./components/Footer";
-import {
-  RouterProvider,
-  createBrowserRouter,
-  Outlet,
-} from "react-router-dom";
+import { RouterProvider, createBrowserRouter, Outlet } from "react-router-dom";
 import Shimmer from "./components/Shimmer";
 import { AuthProvider } from "./context/AuthContext";
 import { Provider } from "react-redux";
@@ -29,11 +25,10 @@ const Container = () => {
     <>
       <Provider store={store}>
         <AuthProvider>
-       
+          <Header />
           <Outlet />
         </AuthProvider>
       </Provider>
-      <Footer/>
     </>
   );
 };

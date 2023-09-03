@@ -6,8 +6,6 @@ export const Auth = () => {
   return useContext(AuthContext);
 };
 
-
-
 export const AuthProvider = (props) => {
   const [authUser, setAuthUser] = useState();
   const [isLoggedIn, setIsLoggedIn] = useState();
@@ -20,24 +18,24 @@ export const AuthProvider = (props) => {
   }, []);
 
   const logIn = () => {
-      setIsLoggedIn(true);
-      setAuthUser({
-        name: "eto",
-        email: "eto@gmail.com",
-      });
-    };
-    
-    const logOut = () => {
-      setIsLoggedIn(false);
-      setAuthUser();
-    };
+    setIsLoggedIn(true);
+    setAuthUser({
+      name: "eto",
+      email: "eto@gmail.com",
+    });
+  };
+
+  const logOut = () => {
+    setIsLoggedIn(false);
+    setAuthUser();
+  };
   const value = {
     authUser,
     setAuthUser,
     isLoggedIn,
     setIsLoggedIn,
     logOut,
-    logIn
+    logIn,
   };
 
   return (

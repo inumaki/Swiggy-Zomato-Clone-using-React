@@ -1,16 +1,18 @@
 import { useSelector, useDispatch } from "react-redux";
-import { addToCart } from "../utils/cartSlice";
+import { addToCart, removeItems } from "../utils/cartSlice";
 import shoppingCart from "../assest/img/shoppingCart.png";
 
 const Cart = () => {
   const items = useSelector((state) => state.cart.items);
-  console.log(items);
   const dispatch = useDispatch();
-  const addItem = () => {
-    dispatch(addToCart("sumit bhai"));
+  // const addItem = () => {
+  //   dispatch(addToCart("checking"));
+  // };
+  const removeItem = (item) => {
+    dispatch(removeItems(item));
   };
   return (
-    <div className="pt-8 text-center bg-fefe h-screen">
+    <div className="pt-8 text-center bg-fefe">
       <div className=" bg-white p-4 w-1/3 ml-5">
         <div className="bg-fefe p-2 flex align-center items-center">
           <img src={shoppingCart} className=" h-[50px] w-[50px] m-1" />
@@ -27,12 +29,11 @@ const Cart = () => {
               <span>{item.itemName}</span>
               <div>
                 <button
-                  className="bg-green-500 hover:bg-green-600 text-white font-semibold py-1 px-2 m-1 rounded-full transition-colors duration-300"
-                  onClick={addItem}
+                  className="bg-red-500 hover:bg-red-600 text-white font-semibold py-1 px-2 rounded-full transition-colors duration-300 active:bg-white active:text-orange-500"
+                  onClick={() => {
+                    removeItem(item);
+                  }}
                 >
-                  +Add
-                </button>
-                <button className="bg-red-500 hover:bg-red-600 text-white font-semibold py-1 px-2 rounded-full transition-colors duration-300">
                   Remove
                 </button>
               </div>

@@ -1,8 +1,8 @@
 import { useState, useEffect } from "react";
-import {restaurantData} from "../constant";
+import { restaurantData } from "../constant";
 
 const useRestaurant = (id) => {
-  const [menu, setMenu] = useState(null);   
+  const [menu, setMenu] = useState(null);
   useEffect(() => {
     //@todo Get Data From Api
     getMenu();

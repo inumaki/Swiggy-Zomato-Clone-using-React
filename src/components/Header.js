@@ -27,7 +27,7 @@ const Header = () => {
           <div className="flex ">
             <img src={shoppingCart} className="h-8 w-8 p-1" />
             <div className=" mr-4 text-gray-700 hover:text-vibrant-red focus:text-vibrant-red cursor-pointer transition-colors duration-300">
-            Cart
+              Cart
             </div>
           </div>
         </Link>
